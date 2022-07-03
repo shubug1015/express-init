@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6", // compile version
+    "module": "commonjs", // compile module
+    "outDir": "./dist", // js files directory after compile
+    "rootDir": ".",
+    "strict": true, //strict option
+    "moduleResolution": "node", // module resolution setting: 'node'(Node.js)
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "src", // absolute url
+    "paths": {
+      "@routers/*": ["routers/*"],
+      "@controllers/*": ["controllers/*"],
+      "@utils/*": ["utils/*"]
+    }
+  }
+}
