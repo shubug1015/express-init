@@ -13,3 +13,12 @@ export const decodeAuthHeader = (authHeader: String): AuthTokenPayload => {
   }
   return jwt.verify(token, SIGN_KEY) as AuthTokenPayload;
 };
+
+export const decodeToken = async (token: string) => {
+  try {
+    jwt.verify(token, SIGN_KEY);
+    return { isValid: true };
+  } catch {
+    return { isValid: false };
+  }
+};

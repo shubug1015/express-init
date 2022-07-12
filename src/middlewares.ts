@@ -1,5 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import multer from 'multer';
+import * as jwt from 'jsonwebtoken';
+import { SIGN_KEY } from '@utils/jwt';
 
 // local
 export const localsMiddleware = (
